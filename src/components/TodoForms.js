@@ -4,15 +4,15 @@ function TodoForms (){
     const [newTaches , setNewTaches]= useState("");
     const [checkTask, setcheckTast]= useState([]);     
      
-    function handleSubmit (e){
+    const handleSubmit= (e)=>{
         e.preventDefault();
         setTaches([...tache, newTaches]);
         setNewTaches("");
      }
-     function handleChange (e){
+     const handleChange= (e)=>{
         setNewTaches(e.target.value);
      }
-     function handleCheck(e){
+     const handleCheck=(e)=>{
         if(e.target){
             setcheckTast([...checkTask, e.target.value]);
         } else{
