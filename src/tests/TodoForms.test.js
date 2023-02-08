@@ -1,6 +1,17 @@
-import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import TodoForms from './components/TodoForms';
+ import React from 'react';
+ import { render, fireEvent } from '@testing-library/react';
+import TodoForms from '../components/TodoForms';
+
+test('should first', () => { 
+  expect(1).toBe(1);
+ })
+test('the dom should have this text',()=>{
+  
+  const {getByText} = render(<TodoForms/>);
+  const text = getByText('to do:');
+  expect(text).toBeInTheDocument;
+})
+ 
 
 describe('TodoForms component', () => {
   test('renders input and button', () => {
